@@ -32,7 +32,7 @@ new Vue({
         }
     },
     beforeCreate() {
-        Vue.prototype.$bus = this
+        Vue.prototype.$bus = this // 安装全局事件总线
     },
 
     render: function (h) {

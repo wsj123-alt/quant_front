@@ -2,7 +2,7 @@
 module.exports = {
     publicPath: process.env.NODE_ENV === 'production' ? '/quant/' : '/',
     devServer: {
-        proxy: 'http://192.168.1.57:8000' // 配置目标服务器地址
+        proxy: 'http://192.168.1.57:8000' // 配置访问的服务器地址
     }
 
     // devServer: {
