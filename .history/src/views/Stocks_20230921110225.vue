@@ -516,6 +516,7 @@
         // 先转成number
         ma1=ma1*1
         ma2=ma2*1
+        console.log("111", ma1, ma2)
         var temp=0
         if(ma1>ma2){
           temp=ma1
@@ -527,17 +528,14 @@
       },
       // 策略选股按钮
       filter() {
-        if(this.param[0]==undefined||this.param[1]==undefined){
-          this.$message.error('请选择正确的双均线参数! (两个参数)')
-          return
-        }
         this.stocks = []
         this.$refs.stock_list.loading = true
-        // console.log("策略选股参数before regularize", this.param[0], this.param[1])
+
         var maParams=this.regularizeMaParams(this.param[0], this.param[1])
         var ma1=maParams[0]
         var ma2=maParams[1] //number
-        console.log("策略选股参数afetr regularize", ma1, ma2)
+
+        console.log("222", ma1, ma2)
         getStrategyInfo({
           "md1": ma1,
           "md2": ma2,
